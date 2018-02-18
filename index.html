@@ -14,13 +14,13 @@
        
         <div id="wrapper">
             <!-- 菜单按钮 -->
-            <div class="btn_menu"  onclick="menu_control()">
+            <div class="btn_menu" data-bind="click:show">
                 <p class="line"></p>
                 <p class="line"></p>
                 <p class="line"></p>
             </div>
         <!-- 菜单 -->
-        <div id="sidebar-wrapper" style="display: none;">
+        <div id="sidebar-wrapper" data-bind="visible:shouldShowMessage">
             <div class="filter-wrapper">
                 <input type="text" id="filter_map" value="" data-bind="value: query, valueUpdate: 'keyup'" placeholder="请输入地名">
             </div>
@@ -38,9 +38,10 @@
             <div id="map"></div>
         </div>
     </div>
+        <script src="js/locations.js"></script>
         <script src="js/jquery/jquery.js"></script>
         <script src="js/knockout/knockout.js"></script>
         <script src="js/app.js"></script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCwrg1x76rTnI39d1sRpG2NnyMlJOLBjuU&v=3&callback=initMap"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCwrg1x76rTnI39d1sRpG2NnyMlJOLBjuU&v=3&callback=initMap" onerror="mapErrorHandler()"></script>
         </body>
 </html>
