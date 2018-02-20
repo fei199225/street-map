@@ -13,14 +13,8 @@
     <body>
        
         <div id="wrapper">
-            <!-- 菜单按钮 -->
-            <div class="btn_menu" data-bind="click:show">
-                <p class="line"></p>
-                <p class="line"></p>
-                <p class="line"></p>
-            </div>
         <!-- 菜单 -->
-        <div id="sidebar-wrapper" data-bind="visible:shouldShowMessage">
+        <div id="sidebar-wrapper" >
             <div class="filter-wrapper">
                 <input type="text" id="filter_map" value="" data-bind="value: query, valueUpdate: 'keyup'" placeholder="请输入地名">
             </div>

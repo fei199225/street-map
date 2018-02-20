@@ -197,11 +197,6 @@ var appViewModel = {
     mapsError: function() {
         alert("Unable to load maps");
     },
-    //菜单显示隐藏
-    shouldShowMessage:ko.observable(false),
-    show:function () {
-        appViewModel.shouldShowMessage(!appViewModel.shouldShowMessage());
-    }
 };
 
 appViewModel.query.subscribe(appViewModel.search);
